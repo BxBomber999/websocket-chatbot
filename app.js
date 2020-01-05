@@ -10,9 +10,9 @@ const port = 3001;
 const rootPath = '/chatbot';
 
 // Serve js files
-app.use('/js', express.static(path.join(__dirname, 'ui/js/')));
+app.use('/chatbot/js', express.static(path.join(__dirname, '/ui/js/')));
 // Serve css files
-app.use('/css', express.static(path.join(__dirname, 'ui/css/')));
+app.use('/chatbot/css', express.static(path.join(__dirname, '/ui/css/')));
 
 app.get(rootPath, (req, res) => {
   res.sendFile(path.join(__dirname + '/ui/html/index.html'));
